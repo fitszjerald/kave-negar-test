@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="fonts">
     <v-app-bar
       app
       color="primary"
@@ -41,3 +41,10 @@ export default {
 };
 
 </script>
+<style lang="scss" scoped>
+@import "assets/scss/main.scss";
+
+.fonts {
+  font-family: "Vazir";
+}
+</style>

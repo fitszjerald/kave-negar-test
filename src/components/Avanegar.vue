@@ -4,9 +4,9 @@
 		<v-card >
     <v-row class="px-5 pt-5">
 			<v-col cols="3" class="align-self-center text-center">
-				<h4>حداکثر تماس همزمان</h4>
+				<h5>حداکثر تماس همزمان</h5>
 			</v-col>
-      <v-col cols="9">
+      <v-col cols="8">
         <v-slider
 					class="mt-5"
           v-model="maxSimCall"
@@ -21,9 +21,9 @@
       </v-col>
 
 			<v-col cols="3" class="align-self-center text-center">
-				<h4>میزان مکالمه (دقیقه)</h4>
+				<h5>میزان مکالمه (دقیقه)</h5>
 			</v-col>
-			<v-col cols="9">
+			<v-col cols="8">
         <v-slider
 					class="mt-5"
           v-model="callAmountMinute"
@@ -37,9 +37,9 @@
 				</v-slider>
       </v-col>
 			<v-col cols="3" class="align-self-center text-center">
-				<h4>میزان نگهداری فایل مکالمه تماس (روز)</h4>
+				<h5>میزان نگهداری فایل مکالمه تماس (روز)</h5>
 			</v-col>
-			<v-col cols="9">
+			<v-col cols="8">
         <v-slider
 					class="mt-5"
           v-model="saveCallDay"
@@ -53,9 +53,9 @@
 				</v-slider>
       </v-col>
 			<v-col cols="3" class="align-self-center text-center">
-				<h4>میزان حجم ذخیره سازی اطلاعات (گیگابایت)</h4>
+				<h5>میزان حجم ذخیره سازی اطلاعات (گیگابایت)</h5>
 			</v-col>
-			<v-col cols="9">
+			<v-col cols="8">
         <v-slider
 					class="mt-5"
           v-model="storageVolume"
@@ -126,7 +126,7 @@ export default {
 	},
 	computed: {
 		priceCal () {
-			return ((this.callAmountMinute * 24) + ((this.maxSimCall/100) * 1000000) + (this.saveCallDay * 1000)) * this.selectMonth.value 
+			return ((this.callAmountMinute * 24) + ((this.maxSimCall/100) * 1000000) + (this.saveCallDay * 1000) +(this.storageVolume * 1000)) * this.selectMonth.value 
 		}
 	}
 }
